@@ -38,13 +38,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-8 text-white/95 leading-tight relative z-10"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-8 text-white/95 leading-tight relative z-10 px-4"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9acd32] to-[#b8d84f]">
               Inteligência Artificial
             </span>
-            <br />
-            para seu Restaurante
+            <br className="md:hidden" />
+            <span className="block sm:inline"> para seu Restaurante</span>
           </motion.h1>
         </div>
 
@@ -62,7 +62,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="flex gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center px-4"
         >
           <a
             href="#cta"

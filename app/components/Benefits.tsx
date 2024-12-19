@@ -13,7 +13,7 @@ export default function Benefits() {
         >
           Benefícios para o Restaurante
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           <BenefitItem
             icon="💰"
             title="Redução de Custos"
@@ -42,11 +42,11 @@ function BenefitItem({ icon, title, description }: { icon: string; title: string
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       whileHover={{ scale: 1.05 }}
-      className="glass-effect p-8 rounded-lg text-center transition-all glow"
+      className="glass-effect p-4 sm:p-6 lg:p-8 rounded-lg text-center transition-all glow"
     >
-      <div className="text-5xl mb-6">{icon}</div>
-      <h3 className="text-2xl font-semibold mb-4 text-accent">{title}</h3>
-      <p className="text-gray-300 text-lg">{description}</p>
+      <div className="text-4xl sm:text-5xl mb-4 sm:mb-6">{icon}</div>
+      <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-accent">{title}</h3>
+      <p className="text-gray-300 text-base sm:text-lg">{description}</p>
     </motion.div>
   )
 }

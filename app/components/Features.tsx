@@ -13,7 +13,7 @@ export default function Features() {
         >
           Funcionalidades-Chave
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           <FeatureItem
             icon="📊"
             title="Centralização de Dados"
@@ -46,11 +46,11 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-[#9acd32]/50 transition-all duration-300"
+      className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl p-4 sm:p-6 lg:p-8 rounded-2xl border border-white/10 hover:border-[#9acd32]/50 transition-all duration-300"
     >
-      <div className="flex items-center mb-6">
-        <div className="text-5xl mr-6 bg-[#9acd32]/10 p-4 rounded-xl">{icon}</div>
-        <h3 className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#9acd32] to-[#b8d84f]">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start mb-4 sm:mb-6">
+        <div className="text-4xl sm:text-5xl mb-4 sm:mb-0 sm:mr-6 bg-[#9acd32]/10 p-4 rounded-xl">{icon}</div>
+        <h3 className="text-xl sm:text-2xl font-semibold text-center sm:text-left bg-clip-text text-transparent bg-gradient-to-r from-[#9acd32] to-[#b8d84f]">
           {title}
         </h3>
       </div>
