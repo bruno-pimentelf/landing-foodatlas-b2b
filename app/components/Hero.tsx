@@ -1,9 +1,10 @@
 'use client'
 import { motion } from 'framer-motion'
+import Earth from '@/components/Globe'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a] to-[#0f0f0f] overflow-hidden relative">
+    <section className="min-h-screen pt-32 flex items-center justify-center bg-gradient-to-b from-[#0a0a0a] via-[#0a0a0a] to-[#0f0f0f] overflow-hidden relative">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
 
@@ -31,24 +32,27 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="container mx-auto px-4 text-center relative z-10"
       >
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold mb-8 text-white leading-tight"
-        >
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9acd32] to-[#b8d84f]">
-            Inteligência Artificial
-          </span>
-          <br />
-          para seu Restaurante
-        </motion.h1>
+        <div className="relative">
+          <Earth className="absolute left-1/2 -translate-x-1/2 -top-24 opacity-40" />
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold mb-8 text-white/95 leading-tight relative z-10"
+          >
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9acd32] to-[#b8d84f]">
+              Inteligência Artificial
+            </span>
+            <br />
+            para seu Restaurante
+          </motion.h1>
+        </div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-xl md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto"
+          className="text-xl md:text-2xl mb-12 text-gray-300/95 max-w-3xl mx-auto"
         >
           Transforme dados em decisões estratégicas com o poder do seu
           <span className="text-[#b8d84f]"> assistente AI personalizado</span>.
@@ -77,4 +81,3 @@ export default function Hero() {
     </section>
   )
 }
-
