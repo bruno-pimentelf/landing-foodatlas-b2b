@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef} from 'react';
 import createGlobe from 'cobe';
 import { cn } from '@/lib/utils';
 interface EarthProps {
@@ -14,6 +15,8 @@ interface EarthProps {
   markerColor?: [number, number, number];
   glowColor?: [number, number, number];
 }
+
+
 const Earth: React.FC<EarthProps> = ({
   className,
   theta = 0.25,
@@ -57,8 +60,6 @@ const Earth: React.FC<EarthProps> = ({
         // longitude latitude
       ],
       onRender: (state: Record<string, any>) => {
-        // Called on every animation frame.
-        // `state` will be an empty object, return updated params.\
         state.phi = phi;
         phi += 0.003;
       },
@@ -67,7 +68,7 @@ const Earth: React.FC<EarthProps> = ({
     return () => {
       globe.destroy();
     };
-  }, []);
+  }, [theta, dark, scale, diffuse, mapSamples, mapBrightness, baseColor, markerColor, glowColor]);
 
   return (
     <div
