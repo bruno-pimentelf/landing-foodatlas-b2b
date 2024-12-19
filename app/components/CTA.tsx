@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import { sendGAEvent } from '@next/third-parties/google'
 
 export default function CTA() {
   return (
@@ -31,6 +32,13 @@ export default function CTA() {
             href="https://c6843e49.sibforms.com/serve/MUIFALEQ5hV-I-eGlgb_eqqPtusFUuE-wqr1JIyw4qsdVXJJus_y9tw8zLYjaRVRSAF4pj7myTZ71-tneOIFlIZvbcNuKPPDFT8xjueWQVk9yFXSkJ90uS_xyRDyOUSiKKChG4d-XCOKgMiTL_kgDwagZoLLWqiptmxndHz9qnfBCvX8uVi-8rWLacJ110oklzNHraSCCFoznFzr"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              sendGAEvent({
+                event: 'click',
+                value: 'cta_button',
+                category: 'conversion'
+              })
+            }}
             className="block w-full px-8 py-4 bg-gradient-to-r from-[#9acd32] to-[#b8d84f] text-black rounded-xl font-semibold hover:opacity-90 transition-all shadow-lg shadow-[#9acd32]/30 hover:shadow-[#9acd32]/50 text-center transform hover:scale-[1.02] duration-300"
           >
             Quero Aumentar Meus Lucros
