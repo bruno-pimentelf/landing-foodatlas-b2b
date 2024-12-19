@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
+}
+
+/* Efeitos de glassmorphism modernos */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Animação suave do gradiente */
+@keyframes gradient-xy {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-gradient-xy {
+  animation: gradient-xy 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+/* Efeito de brilho para elementos interativos */
+.glow {
+  transition: all 0.3s ease;
+}
+
+.glow:hover {
+  box-shadow: 0 0 20px rgba(154, 205, 50, 0.3);
+}
+
+.text-accent {
+  color: rgb(var(--accent-color));
+}
+
+.bg-accent {
+  background-color: rgb(var(--accent-color));
+}
+
+.hover-accent:hover {
+  color: rgb(var(--accent-light));
+}
+
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Animações dos spotlights atualizadas e novas */
+@keyframes spotlight-1 {
+  0%, 100% {
+    opacity: 0.9;
+    transform: rotate(30deg) translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotate(30deg) translateY(-3%);
+  }
+}
+
+@keyframes spotlight-2 {
+  0%, 100% {
+    opacity: 0.8;
+    transform: rotate(-30deg) translateY(0);
+  }
+  50% {
+    opacity: 0.4;
+    transform: rotate(-30deg) translateY(-4%);
+  }
+}
+
+@keyframes spotlight-3 {
+  0%, 100% {
+    opacity: 0.8;
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translateY(-2%) translateX(-50%);
+  }
+}
+
+@keyframes spotlight-4 {
+  0%, 100% {
+    opacity: 0.7;
+    transform: rotate(45deg) translateY(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: rotate(45deg) translateY(-3%);
+  }
+}
+
+@keyframes spotlight-5 {
+  0%, 100% {
+    opacity: 0.7;
+    transform: rotate(-45deg) translateY(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: rotate(-45deg) translateY(-3%);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse-slower {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.15);
+  }
+}
+
+.animate-spotlight-1 {
+  animation: spotlight-1 8s ease-in-out infinite;
+}
+
+.animate-spotlight-2 {
+  animation: spotlight-2 12s ease-in-out infinite;
+}
+
+.animate-spotlight-3 {
+  animation: spotlight-3 10s ease-in-out infinite;
+}
+
+.animate-spotlight-4 {
+  animation: spotlight-4 15s ease-in-out infinite;
+}
+
+.animate-spotlight-5 {
+  animation: spotlight-5 13s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 6s ease-in-out infinite;
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 8s ease-in-out infinite;
+}
+
