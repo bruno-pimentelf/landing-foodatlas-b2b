@@ -16,23 +16,26 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <>
-      <html lang="pt-BR">
-        <head>
-          <Script src="https://www.googletagmanager.com/gtag/js?id=G-SVS378QRH3" strategy="afterInteractive" />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-SVS378QRH3');
-            `}
-          </Script>
-        </head>
-        <body className={inter.className}>{children}</body>
-      </html>
-    </>
-    
+    <html lang="pt-BR">
+      <head>
+        <Script 
+          src="https://www.googletagmanager.com/gtag/js?id=G-SVS378QRH3" 
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SVS378QRH3', {
+              page_path: window.location.pathname,
+              send_page_view: true
+            });
+          `}
+        </Script>
+      </head>
+      <body className={inter.className}>{children}</body>
+    </html>
   )
 }
 

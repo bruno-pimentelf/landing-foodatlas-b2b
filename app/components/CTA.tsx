@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { sendGAEvent } from '@next/third-parties/google'
+import * as gtag from '@/lib/gtag'
 
 export default function CTA() {
   return (
@@ -33,10 +33,11 @@ export default function CTA() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
-              sendGAEvent({
-                event: 'click',
-                value: 'cta_button',
-                category: 'conversion'
+              gtag.event({
+                action: 'click',
+                category: 'conversion',
+                label: 'cta_button',
+                value: 1
               })
             }}
             className="block w-full px-8 py-4 bg-gradient-to-r from-[#9acd32] to-[#b8d84f] text-black rounded-xl font-semibold hover:opacity-90 transition-all shadow-lg shadow-[#9acd32]/30 hover:shadow-[#9acd32]/50 text-center transform hover:scale-[1.02] duration-300"
