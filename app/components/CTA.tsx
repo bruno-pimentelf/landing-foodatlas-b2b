@@ -10,17 +10,21 @@ export default function CTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9acd32] to-[#b8d84f] px-4"
+          className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#9acd32] to-[#b8d84f] px-4"
         >
-          Não Perca Mais Dinheiro com Decisões no Escuro
+          Por Que a Foodatlas?
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto"
+          className="text-lg text-center mb-12 text-gray-300 max-w-3xl mx-auto"
         >
-          Enquanto você lê isso, seus concorrentes já podem estar usando dados para tomar decisões melhores. Garanta sua vantagem competitiva agora - vagas limitadas para a fase beta!
+          Enquanto a maioria dos restaurantes opera com dados fragmentados e inconsistentes, a Foodatlas oferece um ambiente unificado para gestão e análise. Nossa tecnologia capacita gestores a identificar gargalos, otimizar recursos e aprimorar a experiência do cliente com base em evidências concretas.
+          <br /><br />
+          Participe da fase beta e transforme sua operação com o que há de mais avançado em tecnologia para restaurantes.
+          <br />
+          <span className="font-semibold text-[#b8d84f]">Vagas limitadas – garanta seu acesso exclusivo agora!</span>
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,7 +46,7 @@ export default function CTA() {
             }}
             className="block w-full px-8 py-4 bg-gradient-to-r from-[#9acd32] to-[#b8d84f] text-black rounded-xl font-semibold hover:opacity-90 transition-all shadow-lg shadow-[#9acd32]/30 hover:shadow-[#9acd32]/50 text-center transform hover:scale-[1.02] duration-300"
           >
-            Quero Aumentar Meus Lucros
+            Inscreva-se
           </a>
         </motion.div>
       </div>

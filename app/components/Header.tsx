@@ -28,10 +28,10 @@ export default function Header() {
           />
         </motion.div>
         <nav className="hidden md:flex space-x-4">
-          <NavLink href="#problem">O Problema</NavLink>
-          <NavLink href="#solution">A Solução</NavLink>
-          <NavLink href="#features">Funcionalidades</NavLink>
+          <NavLink href="#about">Sobre Nós</NavLink>
           <NavLink href="#benefits">Benefícios</NavLink>
+          <NavLink href="#features">Funcionalidades</NavLink>
+          <NavLink href="https://calendly.com/seu-link" target="_blank">Fale Conosco</NavLink>
         </nav>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
@@ -48,10 +48,10 @@ export default function Header() {
           exit={{ opacity: 0, y: -20 }}
           className="md:hidden glass-effect py-1"
         >
-          <NavLink href="#problem" onClick={() => setIsOpen(false)}>O Problema</NavLink>
-          <NavLink href="#solution" onClick={() => setIsOpen(false)}>A Solução</NavLink>
-          <NavLink href="#features" onClick={() => setIsOpen(false)}>Funcionalidades</NavLink>
+          <NavLink href="#about" onClick={() => setIsOpen(false)}>Sobre Nós</NavLink>
           <NavLink href="#benefits" onClick={() => setIsOpen(false)}>Benefícios</NavLink>
+          <NavLink href="#features" onClick={() => setIsOpen(false)}>Funcionalidades</NavLink>
+          <NavLink href="https://calendly.com/seu-link" onClick={() => setIsOpen(false)}>Fale Conosco</NavLink>
         </motion.div>
       )}
     </motion.header>

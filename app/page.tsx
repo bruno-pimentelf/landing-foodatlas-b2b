@@ -4,17 +4,15 @@ import Features from "./components/Features";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Problem from "./components/Problem";
-import Solution from "./components/Solution";
+import About from "./components/About";
 
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-900 text-white">
-      <Header  />
+      <Header />
       <Hero />
-      <Problem />
-      <Solution />
+      <About />
       <Features />
       <Benefits />
       <CTA />

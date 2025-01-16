@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import { CostReductionIcon, RevenueIcon, DecisionIcon } from './icons'
 
 export default function Benefits() {
   return (
@@ -9,25 +10,25 @@ export default function Benefits() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold mb-12 text-center text-accent"
+          className="text-3xl md:text-4xl font-bold mb-12 text-center text-accent"
         >
-          Benefícios para o Restaurante
+          Benefícios Tangíveis
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           <BenefitItem
-            icon="💰"
-            title="Redução de Custos"
-            description="Identifique desperdícios e otimize recursos."
+            icon={<CostReductionIcon className="w-12 h-12 text-[#9acd32]" />}
+            title="Redução de Custos Operacionais"
+            description="Identificação precisa de desperdícios e otimização de recursos."
           />
           <BenefitItem
-            icon="📈"
-            title="Aumento de Receitas"
-            description="Descubra o que mais vende e adapte seu cardápio."
+            icon={<RevenueIcon className="w-12 h-12 text-[#9acd32]" />}
+            title="Maximização de Receita"
+            description="Análises detalhadas que ajudam a priorizar itens mais lucrativos e atrativos."
           />
           <BenefitItem
-            icon="🚀"
-            title="Decisões Ágeis e Estratégicas"
-            description="Baseie-se em dados e não apenas na intuição."
+            icon={<DecisionIcon className="w-12 h-12 text-[#9acd32]" />}
+            title="Decisões Estratégicas Baseadas em Dados"
+            description="Substitua a intuição por insights técnicos e objetivos."
           />
         </div>
       </div>
@@ -35,7 +36,7 @@ export default function Benefits() {
   )
 }
 
-function BenefitItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+function BenefitItem({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

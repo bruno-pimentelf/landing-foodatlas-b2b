@@ -38,13 +38,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-8 text-white/95 leading-tight relative z-10 px-4"
+            className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-8 text-white/95 leading-tight relative z-10 px-4"
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9acd32] to-[#b8d84f]">
-              Inteligência Artificial
+            <span>Gestão de Restaurantes</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9acd32] to-[#b8d84f] block">
+              Otimizada com Inteligência Artificial
             </span>
-            <br className="md:hidden" />
-            <span className="block sm:inline"> para seu Restaurante</span>
           </motion.h1>
         </div>
 
@@ -52,10 +51,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-xl md:text-2xl mb-12 text-gray-300/95 max-w-3xl mx-auto"
+          className="text-lg md:text-xl mb-12 text-gray-300/95 max-w-3xl mx-auto"
         >
-          Transforme dados em decisões estratégicas com o poder do seu
-          <span className="text-[#b8d84f]"> assistente AI personalizado</span>.
+          Experimente agora a Tecnologia Exclusiva que Vai Transformar Seu Restaurante
         </motion.p>
 
         <motion.div
@@ -65,16 +63,16 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center px-4"
         >
           <a
-            href="#cta"
+            href="/login"
             className="bg-gradient-to-r from-[#9acd32] to-[#b8d84f] text-black px-8 py-4 rounded-full text-lg font-semibold hover:opacity-90 transition-all inline-block shadow-lg shadow-[#9acd32]/30"
           >
-            Comece Agora
+            Inscreva-se
           </a>
           <a
-            href="#features"
+            href="https://forms.google.com/seu-form"
             className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all inline-block border border-white/20"
           >
-            Ver Recursos
+            Agende uma Demo
           </a>
         </motion.div>
       </motion.div>

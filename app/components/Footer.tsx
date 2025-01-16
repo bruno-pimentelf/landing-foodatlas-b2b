@@ -1,5 +1,9 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import logo from '@/assets/foodatlaslogo.png'
+
+
 
 export default function Footer() {
   return (
@@ -11,11 +15,19 @@ export default function Footer() {
           transition={{ duration: 0.8 }}
           className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0"
         >
-          <div className="text-2xl sm:text-3xl font-bold text-accent">FoodAtlas</div>
+          <div className="text-2xl sm:text-3xl font-bold text-accent">
+            <Image
+              src={logo}
+              alt="FoodAtlas Logo"
+              width={130}
+              height={20}
+              className="object-contain"
+            />
+          </div>
           <nav className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 text-center">
-            <a href="#" className="text-gray-300 hover-accent transition-all">Termos de Uso</a>
-            <a href="#" className="text-gray-300 hover-accent transition-all">Política de Privacidade</a>
-            <a href="#" className="text-gray-300 hover-accent transition-all">Contato</a>
+            <a href="/termos.pdf" className="text-gray-300 hover-accent transition-all">Termos de Uso</a>
+            <a href="/privacidade.pdf" className="text-gray-300 hover-accent transition-all">Política de Privacidade</a>
+            <a href="mailto:seu@email.com" className="text-gray-300 hover-accent transition-all">Email</a>
           </nav>
         </motion.div>
         <motion.div
