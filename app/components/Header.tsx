@@ -31,7 +31,7 @@ export default function Header() {
           <NavLink href="#about">Sobre Nós</NavLink>
           <NavLink href="#benefits">Benefícios</NavLink>
           <NavLink href="#features">Funcionalidades</NavLink>
-          <NavLink href="https://calendly.com/seu-link">Fale Conosco</NavLink>
+          <NavLink href="https://calendly.com/foodatlas">Fale Conosco</NavLink>
         </nav>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
