@@ -51,7 +51,7 @@ export default function Header() {
           <NavLink href="#about" onClick={() => setIsOpen(false)}>Sobre Nós</NavLink>
           <NavLink href="#benefits" onClick={() => setIsOpen(false)}>Benefícios</NavLink>
           <NavLink href="#features" onClick={() => setIsOpen(false)}>Funcionalidades</NavLink>
-          <NavLink href="https://calendly.com/seu-link" onClick={() => setIsOpen(false)}>Fale Conosco</NavLink>
+          <NavLink href="https://calendly.com/foodatlas" onClick={() => setIsOpen(false)}>Fale Conosco</NavLink>
         </motion.div>
       )}
     </motion.header>

@@ -63,13 +63,15 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center px-4"
         >
           <a
-            href="/login"
+            href="https://c6843e49.sibforms.com/serve/MUIFALEQ5hV-I-eGlgb_eqqPtusFUuE-wqr1JIyw4qsdVXJJus_y9tw8zLYjaRVRSAF4pj7myTZ71-tneOIFlIZvbcNuKPPDFT8xjueWQVk9yFXSkJ90uS_xyRDyOUSiKKChG4d-XCOKgMiTL_kgDwagZoLLWqiptmxndHz9qnfBCvX8uVi-8rWLacJ110oklzNHraSCCFoznFzr"
+            target="_blank"
             className="bg-gradient-to-r from-[#9acd32] to-[#b8d84f] text-black px-8 py-4 rounded-full text-lg font-semibold hover:opacity-90 transition-all inline-block shadow-lg shadow-[#9acd32]/30"
           >
             Inscreva-se
           </a>
           <a
-            href="https://forms.google.com/seu-form"
+            href="https://calendly.com/foodatlas"
+            target="_blank"
             className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/20 transition-all inline-block border border-white/20"
           >
             Agende uma Demo
