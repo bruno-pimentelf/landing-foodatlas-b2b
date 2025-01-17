@@ -1,13 +1,19 @@
 'use client'
 import { motion } from 'framer-motion'
-import Earth from '@/components/Globe'
-
+import Image from 'next/image'
+import logo from '@/assets/foodatlas_LOGOS-05.svg'
 export default function About() {
   return (
     <section id="about" className="section-padding bg-[#0f0f0f]">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-        <div className="md:w-1/2">
-          <Earth className="w-full h-full opacity-80" />
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 justify-between">
+        <div className="md:w-1/2 flex justify-center">
+          <Image
+            src={logo}
+            alt="logo classica"
+            width={475}
+            height={475}
+            className="object-contain"
+          />
         </div>
         
         <div className="md:w-1/2">
