@@ -3,8 +3,6 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import logo from '@/assets/foodatlaslogo.png'
 
-
-
 export default function Footer() {
   return (
     <footer className="bg-[#0a0a0a] py-8 sm:py-12">
@@ -22,12 +20,11 @@ export default function Footer() {
               width={130}
               height={20}
               className="object-contain"
-            />
+            />            
           </div>
           <nav className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 text-center">
-            <a href="#" className="text-gray-300 hover-accent transition-all">Termos de Uso</a>
-            <a href="#" className="text-gray-300 hover-accent transition-all">Política de Privacidade</a>
-            <a href="#" className="text-gray-300 hover-accent transition-all">Email</a>
+            <a href="/Termos_e_Condicoes.pdf" target="_blank" className="text-gray-300 hover-accent transition-all">Termos de Uso</a>
+            <a href="/Politica_de_Privacidade.pdf" target="_blank" className="text-gray-300 hover-accent transition-all">Política de Privacidade</a>            
           </nav>  
         </motion.div>
         <motion.div
