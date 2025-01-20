@@ -24,7 +24,8 @@ export default function Footer() {
           </div>
           <nav className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 text-center">
             <a href="/Termos_e_Condicoes.pdf" target="_blank" className="text-gray-300 hover-accent transition-all">Termos de Uso</a>
-            <a href="/Politica_de_Privacidade.pdf" target="_blank" className="text-gray-300 hover-accent transition-all">Política de Privacidade</a>            
+            <a href="/Politica_de_Privacidade.pdf" target="_blank" className="text-gray-300 hover-accent transition-all">Política de Privacidade</a> 
+            <a href="mailto:contact@foodatlasbr.com" className="text-gray-300 hover-accent transition-all">Email</a>
           </nav>  
         </motion.div>
         <motion.div
