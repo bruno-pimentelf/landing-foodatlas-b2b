@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import Earth from '@/components/Globe'
+import { TypeAnimation } from "react-type-animation"
 
 export default function Hero() {
   return (
@@ -42,7 +43,22 @@ export default function Hero() {
           >
             <span>Gestão de Restaurantes</span>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#9acd32] to-[#b8d84f] block">
-              Otimizada com Inteligência Artificial
+              <TypeAnimation
+                sequence={[
+                  "Otimizada",
+                  2500,
+                  "Potencializada",
+                  2500,
+                  "Elaborada",
+                  2500,
+                  "Impulsionada",
+                  2500,
+                ]}
+                wrapper='span'
+                speed={50}
+                repeat={Number.POSITIVE_INFINITY}
+              />{""}          
+              com Inteligência Artificial
             </span>
           </motion.h1>
         </div>
